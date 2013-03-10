@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		528FCB1316ED0A4C0071600E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB1216ED0A4C0071600E /* UIKit.framework */; };
+		528FCB1516ED0A4C0071600E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB1416ED0A4C0071600E /* Foundation.framework */; };
+		528FCB1716ED0A4C0071600E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB1616ED0A4C0071600E /* CoreGraphics.framework */; };
+		528FCB1D16ED0A4C0071600E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB1B16ED0A4C0071600E /* InfoPlist.strings */; };
+		528FCB1F16ED0A4C0071600E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 528FCB1E16ED0A4C0071600E /* main.m */; };
+		528FCB2316ED0A4C0071600E /* GASAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 528FCB2216ED0A4C0071600E /* GASAppDelegate.m */; };
+		528FCB2516ED0A4C0071600E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB2416ED0A4C0071600E /* Default.png */; };
+		528FCB2716ED0A4C0071600E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB2616ED0A4C0071600E /* Default@2x.png */; };
+		528FCB2916ED0A4C0071600E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB2816ED0A4C0071600E /* Default-568h@2x.png */; };
+		528FCB3116ED0A4C0071600E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB3016ED0A4C0071600E /* SenTestingKit.framework */; };
+		528FCB3216ED0A4C0071600E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB1216ED0A4C0071600E /* UIKit.framework */; };
+		528FCB3316ED0A4C0071600E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB1416ED0A4C0071600E /* Foundation.framework */; };
+		528FCB3B16ED0A4C0071600E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB3916ED0A4C0071600E /* InfoPlist.strings */; };
+		528FCB3E16ED0A4C0071600E /* AuctionSniperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 528FCB3D16ED0A4C0071600E /* AuctionSniperTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		528FCB3416ED0A4C0071600E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 528FCB0716ED0A4C0071600E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 528FCB0E16ED0A4C0071600E;
+			remoteInfo = AuctionSniper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		528FCB0F16ED0A4C0071600E /* AuctionSniper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuctionSniper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		528FCB1216ED0A4C0071600E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		528FCB1416ED0A4C0071600E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		528FCB1616ED0A4C0071600E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		528FCB1A16ED0A4C0071600E /* AuctionSniper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AuctionSniper-Info.plist"; sourceTree = "<group>"; };
+		528FCB1C16ED0A4C0071600E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		528FCB1E16ED0A4C0071600E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		528FCB2016ED0A4C0071600E /* AuctionSniper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AuctionSniper-Prefix.pch"; sourceTree = "<group>"; };
+		528FCB2116ED0A4C0071600E /* GASAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GASAppDelegate.h; sourceTree = "<group>"; };
+		528FCB2216ED0A4C0071600E /* GASAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GASAppDelegate.m; sourceTree = "<group>"; };
+		528FCB2416ED0A4C0071600E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		528FCB2616ED0A4C0071600E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		528FCB2816ED0A4C0071600E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		528FCB2F16ED0A4C0071600E /* AuctionSniperTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuctionSniperTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		528FCB3016ED0A4C0071600E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		528FCB3816ED0A4C0071600E /* AuctionSniperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AuctionSniperTests-Info.plist"; sourceTree = "<group>"; };
+		528FCB3A16ED0A4C0071600E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		528FCB3C16ED0A4C0071600E /* AuctionSniperTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuctionSniperTests.h; sourceTree = "<group>"; };
+		528FCB3D16ED0A4C0071600E /* AuctionSniperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuctionSniperTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		528FCB0C16ED0A4C0071600E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528FCB1316ED0A4C0071600E /* UIKit.framework in Frameworks */,
+				528FCB1516ED0A4C0071600E /* Foundation.framework in Frameworks */,
+				528FCB1716ED0A4C0071600E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528FCB2B16ED0A4C0071600E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528FCB3116ED0A4C0071600E /* SenTestingKit.framework in Frameworks */,
+				528FCB3216ED0A4C0071600E /* UIKit.framework in Frameworks */,
+				528FCB3316ED0A4C0071600E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		528FCB0616ED0A4C0071600E = {
+			isa = PBXGroup;
+			children = (
+				528FCB1816ED0A4C0071600E /* AuctionSniper */,
+				528FCB3616ED0A4C0071600E /* AuctionSniperTests */,
+				528FCB1116ED0A4C0071600E /* Frameworks */,
+				528FCB1016ED0A4C0071600E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		528FCB1016ED0A4C0071600E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				528FCB0F16ED0A4C0071600E /* AuctionSniper.app */,
+				528FCB2F16ED0A4C0071600E /* AuctionSniperTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		528FCB1116ED0A4C0071600E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				528FCB1216ED0A4C0071600E /* UIKit.framework */,
+				528FCB1416ED0A4C0071600E /* Foundation.framework */,
+				528FCB1616ED0A4C0071600E /* CoreGraphics.framework */,
+				528FCB3016ED0A4C0071600E /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		528FCB1816ED0A4C0071600E /* AuctionSniper */ = {
+			isa = PBXGroup;
+			children = (
+				528FCB2116ED0A4C0071600E /* GASAppDelegate.h */,
+				528FCB2216ED0A4C0071600E /* GASAppDelegate.m */,
+				528FCB1916ED0A4C0071600E /* Supporting Files */,
+			);
+			path = AuctionSniper;
+			sourceTree = "<group>";
+		};
+		528FCB1916ED0A4C0071600E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				528FCB1A16ED0A4C0071600E /* AuctionSniper-Info.plist */,
+				528FCB1B16ED0A4C0071600E /* InfoPlist.strings */,
+				528FCB1E16ED0A4C0071600E /* main.m */,
+				528FCB2016ED0A4C0071600E /* AuctionSniper-Prefix.pch */,
+				528FCB2416ED0A4C0071600E /* Default.png */,
+				528FCB2616ED0A4C0071600E /* Default@2x.png */,
+				528FCB2816ED0A4C0071600E /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		528FCB3616ED0A4C0071600E /* AuctionSniperTests */ = {
+			isa = PBXGroup;
+			children = (
+				528FCB3C16ED0A4C0071600E /* AuctionSniperTests.h */,
+				528FCB3D16ED0A4C0071600E /* AuctionSniperTests.m */,
+				528FCB3716ED0A4C0071600E /* Supporting Files */,
+			);
+			path = AuctionSniperTests;
+			sourceTree = "<group>";
+		};
+		528FCB3716ED0A4C0071600E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				528FCB3816ED0A4C0071600E /* AuctionSniperTests-Info.plist */,
+				528FCB3916ED0A4C0071600E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		528FCB0E16ED0A4C0071600E /* AuctionSniper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 528FCB4116ED0A4C0071600E /* Build configuration list for PBXNativeTarget "AuctionSniper" */;
+			buildPhases = (
+				528FCB0B16ED0A4C0071600E /* Sources */,
+				528FCB0C16ED0A4C0071600E /* Frameworks */,
+				528FCB0D16ED0A4C0071600E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AuctionSniper;
+			productName = AuctionSniper;
+			productReference = 528FCB0F16ED0A4C0071600E /* AuctionSniper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		528FCB2E16ED0A4C0071600E /* AuctionSniperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 528FCB4416ED0A4C0071600E /* Build configuration list for PBXNativeTarget "AuctionSniperTests" */;
+			buildPhases = (
+				528FCB2A16ED0A4C0071600E /* Sources */,
+				528FCB2B16ED0A4C0071600E /* Frameworks */,
+				528FCB2C16ED0A4C0071600E /* Resources */,
+				528FCB2D16ED0A4C0071600E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				528FCB3516ED0A4C0071600E /* PBXTargetDependency */,
+			);
+			name = AuctionSniperTests;
+			productName = AuctionSniperTests;
+			productReference = 528FCB2F16ED0A4C0071600E /* AuctionSniperTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		528FCB0716ED0A4C0071600E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GAS;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "eSpark Learning";
+			};
+			buildConfigurationList = 528FCB0A16ED0A4C0071600E /* Build configuration list for PBXProject "AuctionSniper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 528FCB0616ED0A4C0071600E;
+			productRefGroup = 528FCB1016ED0A4C0071600E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				528FCB0E16ED0A4C0071600E /* AuctionSniper */,
+				528FCB2E16ED0A4C0071600E /* AuctionSniperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		528FCB0D16ED0A4C0071600E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528FCB1D16ED0A4C0071600E /* InfoPlist.strings in Resources */,
+				528FCB2516ED0A4C0071600E /* Default.png in Resources */,
+				528FCB2716ED0A4C0071600E /* Default@2x.png in Resources */,
+				528FCB2916ED0A4C0071600E /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528FCB2C16ED0A4C0071600E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528FCB3B16ED0A4C0071600E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		528FCB2D16ED0A4C0071600E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		528FCB0B16ED0A4C0071600E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528FCB1F16ED0A4C0071600E /* main.m in Sources */,
+				528FCB2316ED0A4C0071600E /* GASAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528FCB2A16ED0A4C0071600E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528FCB3E16ED0A4C0071600E /* AuctionSniperTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		528FCB3516ED0A4C0071600E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 528FCB0E16ED0A4C0071600E /* AuctionSniper */;
+			targetProxy = 528FCB3416ED0A4C0071600E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		528FCB1B16ED0A4C0071600E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528FCB1C16ED0A4C0071600E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		528FCB3916ED0A4C0071600E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528FCB3A16ED0A4C0071600E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		528FCB3F16ED0A4C0071600E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		528FCB4016ED0A4C0071600E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		528FCB4216ED0A4C0071600E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AuctionSniper/AuctionSniper-Prefix.pch";
+				INFOPLIST_FILE = "AuctionSniper/AuctionSniper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		528FCB4316ED0A4C0071600E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AuctionSniper/AuctionSniper-Prefix.pch";
+				INFOPLIST_FILE = "AuctionSniper/AuctionSniper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		528FCB4516ED0A4C0071600E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AuctionSniper.app/AuctionSniper";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AuctionSniper/AuctionSniper-Prefix.pch";
+				INFOPLIST_FILE = "AuctionSniperTests/AuctionSniperTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		528FCB4616ED0A4C0071600E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AuctionSniper.app/AuctionSniper";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AuctionSniper/AuctionSniper-Prefix.pch";
+				INFOPLIST_FILE = "AuctionSniperTests/AuctionSniperTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		528FCB0A16ED0A4C0071600E /* Build configuration list for PBXProject "AuctionSniper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528FCB3F16ED0A4C0071600E /* Debug */,
+				528FCB4016ED0A4C0071600E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		528FCB4116ED0A4C0071600E /* Build configuration list for PBXNativeTarget "AuctionSniper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528FCB4216ED0A4C0071600E /* Debug */,
+				528FCB4316ED0A4C0071600E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		528FCB4416ED0A4C0071600E /* Build configuration list for PBXNativeTarget "AuctionSniperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528FCB4516ED0A4C0071600E /* Debug */,
+				528FCB4616ED0A4C0071600E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 528FCB0716ED0A4C0071600E /* Project object */;
+}
