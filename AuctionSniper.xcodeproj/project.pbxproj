@@ -22,6 +22,9 @@
 		528FCB5516ED0B340071600E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB5316ED0B340071600E /* InfoPlist.strings */; };
 		528FCB5716ED0B340071600E /* ExampleSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 528FCB5616ED0B340071600E /* ExampleSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		528FCB5916ED0B350071600E /* Cedar-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB5816ED0B350071600E /* Cedar-iOS.framework */; };
+		528FCB7516ED0FCC0071600E /* my_first.feature in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB6116ED0FCC0071600E /* my_first.feature */; };
+		528FCB7616ED0FCC0071600E /* launch_steps.rb in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB6316ED0FCC0071600E /* launch_steps.rb */; };
+		528FCB7716ED0FCC0071600E /* env.rb in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB6516ED0FCC0071600E /* env.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		528FCB5816ED0B350071600E /* Cedar-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iOS.framework"; path = "Frameworks/Cedar-iOS.framework"; sourceTree = "<group>"; };
 		528FCB5A16ED0B350071600E /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
 		528FCB5E16ED0BE40071600E /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
+		528FCB6116ED0FCC0071600E /* my_first.feature */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = my_first.feature; sourceTree = "<group>"; };
+		528FCB6316ED0FCC0071600E /* launch_steps.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = launch_steps.rb; sourceTree = "<group>"; };
+		528FCB6516ED0FCC0071600E /* env.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = env.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,7 @@
 		528FCB0616ED0A4C0071600E = {
 			isa = PBXGroup;
 			children = (
+				528FCB5F16ED0FCC0071600E /* Frank */,
 				528FCB1816ED0A4C0071600E /* AuctionSniper */,
 				528FCB5016ED0B340071600E /* Specs */,
 				528FCB1116ED0A4C0071600E /* Frameworks */,
@@ -146,6 +153,40 @@
 				528FCB5A16ED0B350071600E /* Specs-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		528FCB5F16ED0FCC0071600E /* Frank */ = {
+			isa = PBXGroup;
+			children = (
+				528FCB6016ED0FCC0071600E /* features */,
+			);
+			path = Frank;
+			sourceTree = "<group>";
+		};
+		528FCB6016ED0FCC0071600E /* features */ = {
+			isa = PBXGroup;
+			children = (
+				528FCB6116ED0FCC0071600E /* my_first.feature */,
+				528FCB6216ED0FCC0071600E /* step_definitions */,
+				528FCB6416ED0FCC0071600E /* support */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		528FCB6216ED0FCC0071600E /* step_definitions */ = {
+			isa = PBXGroup;
+			children = (
+				528FCB6316ED0FCC0071600E /* launch_steps.rb */,
+			);
+			path = step_definitions;
+			sourceTree = "<group>";
+		};
+		528FCB6416ED0FCC0071600E /* support */ = {
+			isa = PBXGroup;
+			children = (
+				528FCB6516ED0FCC0071600E /* env.rb */,
+			);
+			path = support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +264,9 @@
 				528FCB2516ED0A4C0071600E /* Default.png in Resources */,
 				528FCB2716ED0A4C0071600E /* Default@2x.png in Resources */,
 				528FCB2916ED0A4C0071600E /* Default-568h@2x.png in Resources */,
+				528FCB7516ED0FCC0071600E /* my_first.feature in Resources */,
+				528FCB7616ED0FCC0071600E /* launch_steps.rb in Resources */,
+				528FCB7716ED0FCC0071600E /* env.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +400,15 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AuctionSniper/AuctionSniper-Prefix.pch";
 				INFOPLIST_FILE = "AuctionSniper/AuctionSniper-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRANK_LIBRARY_SEARCH_PATHS)",
+					"\"$(SRCROOT)/Frank\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(FRANK_LDFLAGS)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -367,6 +420,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AuctionSniper/AuctionSniper-Prefix.pch";
 				INFOPLIST_FILE = "AuctionSniper/AuctionSniper-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frank\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -437,6 +494,7 @@
 				528FCB4316ED0A4C0071600E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		528FCB5B16ED0B350071600E /* Build configuration list for PBXNativeTarget "Specs" */ = {
 			isa = XCConfigurationList;
@@ -445,6 +503,7 @@
 				528FCB5D16ED0B350071600E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
