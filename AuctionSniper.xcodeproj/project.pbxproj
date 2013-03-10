@@ -16,22 +16,13 @@
 		528FCB2516ED0A4C0071600E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB2416ED0A4C0071600E /* Default.png */; };
 		528FCB2716ED0A4C0071600E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB2616ED0A4C0071600E /* Default@2x.png */; };
 		528FCB2916ED0A4C0071600E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB2816ED0A4C0071600E /* Default-568h@2x.png */; };
-		528FCB3116ED0A4C0071600E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB3016ED0A4C0071600E /* SenTestingKit.framework */; };
-		528FCB3216ED0A4C0071600E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB1216ED0A4C0071600E /* UIKit.framework */; };
-		528FCB3316ED0A4C0071600E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB1416ED0A4C0071600E /* Foundation.framework */; };
-		528FCB3B16ED0A4C0071600E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB3916ED0A4C0071600E /* InfoPlist.strings */; };
-		528FCB3E16ED0A4C0071600E /* AuctionSniperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 528FCB3D16ED0A4C0071600E /* AuctionSniperTests.m */; };
+		528FCB4D16ED0B340071600E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB3016ED0A4C0071600E /* SenTestingKit.framework */; };
+		528FCB4E16ED0B340071600E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB1216ED0A4C0071600E /* UIKit.framework */; };
+		528FCB4F16ED0B340071600E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB1416ED0A4C0071600E /* Foundation.framework */; };
+		528FCB5516ED0B340071600E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB5316ED0B340071600E /* InfoPlist.strings */; };
+		528FCB5716ED0B340071600E /* ExampleSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 528FCB5616ED0B340071600E /* ExampleSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		528FCB5916ED0B350071600E /* Cedar-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB5816ED0B350071600E /* Cedar-iOS.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		528FCB3416ED0A4C0071600E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 528FCB0716ED0A4C0071600E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 528FCB0E16ED0A4C0071600E;
-			remoteInfo = AuctionSniper;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		528FCB0F16ED0A4C0071600E /* AuctionSniper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuctionSniper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,12 +38,14 @@
 		528FCB2416ED0A4C0071600E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		528FCB2616ED0A4C0071600E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		528FCB2816ED0A4C0071600E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		528FCB2F16ED0A4C0071600E /* AuctionSniperTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuctionSniperTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		528FCB3016ED0A4C0071600E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		528FCB3816ED0A4C0071600E /* AuctionSniperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AuctionSniperTests-Info.plist"; sourceTree = "<group>"; };
-		528FCB3A16ED0A4C0071600E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		528FCB3C16ED0A4C0071600E /* AuctionSniperTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuctionSniperTests.h; sourceTree = "<group>"; };
-		528FCB3D16ED0A4C0071600E /* AuctionSniperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuctionSniperTests.m; sourceTree = "<group>"; };
+		528FCB4C16ED0B340071600E /* Specs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		528FCB5216ED0B340071600E /* Specs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
+		528FCB5416ED0B340071600E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		528FCB5616ED0B340071600E /* ExampleSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ExampleSpec.mm; sourceTree = "<group>"; };
+		528FCB5816ED0B350071600E /* Cedar-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iOS.framework"; path = "Frameworks/Cedar-iOS.framework"; sourceTree = "<group>"; };
+		528FCB5A16ED0B350071600E /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
+		528FCB5E16ED0BE40071600E /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +59,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		528FCB2B16ED0A4C0071600E /* Frameworks */ = {
+		528FCB4816ED0B340071600E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				528FCB3116ED0A4C0071600E /* SenTestingKit.framework in Frameworks */,
-				528FCB3216ED0A4C0071600E /* UIKit.framework in Frameworks */,
-				528FCB3316ED0A4C0071600E /* Foundation.framework in Frameworks */,
+				528FCB4D16ED0B340071600E /* SenTestingKit.framework in Frameworks */,
+				528FCB4E16ED0B340071600E /* UIKit.framework in Frameworks */,
+				528FCB4F16ED0B340071600E /* Foundation.framework in Frameworks */,
+				528FCB5916ED0B350071600E /* Cedar-iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				528FCB1816ED0A4C0071600E /* AuctionSniper */,
-				528FCB3616ED0A4C0071600E /* AuctionSniperTests */,
+				528FCB5016ED0B340071600E /* Specs */,
 				528FCB1116ED0A4C0071600E /* Frameworks */,
 				528FCB1016ED0A4C0071600E /* Products */,
 			);
@@ -93,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				528FCB0F16ED0A4C0071600E /* AuctionSniper.app */,
-				528FCB2F16ED0A4C0071600E /* AuctionSniperTests.octest */,
+				528FCB4C16ED0B340071600E /* Specs.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,21 +127,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		528FCB3616ED0A4C0071600E /* AuctionSniperTests */ = {
+		528FCB5016ED0B340071600E /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				528FCB3C16ED0A4C0071600E /* AuctionSniperTests.h */,
-				528FCB3D16ED0A4C0071600E /* AuctionSniperTests.m */,
-				528FCB3716ED0A4C0071600E /* Supporting Files */,
+				528FCB5616ED0B340071600E /* ExampleSpec.mm */,
+				528FCB5816ED0B350071600E /* Cedar-iOS.framework */,
+				528FCB5116ED0B340071600E /* Supporting Files */,
+				528FCB5E16ED0BE40071600E /* SpecHelper.h */,
 			);
-			path = AuctionSniperTests;
+			path = Specs;
 			sourceTree = "<group>";
 		};
-		528FCB3716ED0A4C0071600E /* Supporting Files */ = {
+		528FCB5116ED0B340071600E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				528FCB3816ED0A4C0071600E /* AuctionSniperTests-Info.plist */,
-				528FCB3916ED0A4C0071600E /* InfoPlist.strings */,
+				528FCB5216ED0B340071600E /* Specs-Info.plist */,
+				528FCB5316ED0B340071600E /* InfoPlist.strings */,
+				528FCB5A16ED0B350071600E /* Specs-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -172,23 +168,22 @@
 			productReference = 528FCB0F16ED0A4C0071600E /* AuctionSniper.app */;
 			productType = "com.apple.product-type.application";
 		};
-		528FCB2E16ED0A4C0071600E /* AuctionSniperTests */ = {
+		528FCB4B16ED0B340071600E /* Specs */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 528FCB4416ED0A4C0071600E /* Build configuration list for PBXNativeTarget "AuctionSniperTests" */;
+			buildConfigurationList = 528FCB5B16ED0B350071600E /* Build configuration list for PBXNativeTarget "Specs" */;
 			buildPhases = (
-				528FCB2A16ED0A4C0071600E /* Sources */,
-				528FCB2B16ED0A4C0071600E /* Frameworks */,
-				528FCB2C16ED0A4C0071600E /* Resources */,
-				528FCB2D16ED0A4C0071600E /* ShellScript */,
+				528FCB4716ED0B340071600E /* Sources */,
+				528FCB4816ED0B340071600E /* Frameworks */,
+				528FCB4916ED0B340071600E /* Resources */,
+				528FCB4A16ED0B340071600E /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				528FCB3516ED0A4C0071600E /* PBXTargetDependency */,
 			);
-			name = AuctionSniperTests;
-			productName = AuctionSniperTests;
-			productReference = 528FCB2F16ED0A4C0071600E /* AuctionSniperTests.octest */;
+			name = Specs;
+			productName = Specs;
+			productReference = 528FCB4C16ED0B340071600E /* Specs.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -214,7 +209,7 @@
 			projectRoot = "";
 			targets = (
 				528FCB0E16ED0A4C0071600E /* AuctionSniper */,
-				528FCB2E16ED0A4C0071600E /* AuctionSniperTests */,
+				528FCB4B16ED0B340071600E /* Specs */,
 			);
 		};
 /* End PBXProject section */
@@ -231,18 +226,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		528FCB2C16ED0A4C0071600E /* Resources */ = {
+		528FCB4916ED0B340071600E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				528FCB3B16ED0A4C0071600E /* InfoPlist.strings in Resources */,
+				528FCB5516ED0B340071600E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		528FCB2D16ED0A4C0071600E /* ShellScript */ = {
+		528FCB4A16ED0B340071600E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -267,23 +262,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		528FCB2A16ED0A4C0071600E /* Sources */ = {
+		528FCB4716ED0B340071600E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				528FCB3E16ED0A4C0071600E /* AuctionSniperTests.m in Sources */,
+				528FCB5716ED0B340071600E /* ExampleSpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		528FCB3516ED0A4C0071600E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 528FCB0E16ED0A4C0071600E /* AuctionSniper */;
-			targetProxy = 528FCB3416ED0A4C0071600E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		528FCB1B16ED0A4C0071600E /* InfoPlist.strings */ = {
@@ -294,10 +281,10 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		528FCB3916ED0A4C0071600E /* InfoPlist.strings */ = {
+		528FCB5316ED0B340071600E /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				528FCB3A16ED0A4C0071600E /* en */,
+				528FCB5416ED0B340071600E /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -385,34 +372,46 @@
 			};
 			name = Release;
 		};
-		528FCB4516ED0A4C0071600E /* Debug */ = {
+		528FCB5C16ED0B350071600E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AuctionSniper.app/AuctionSniper";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)/Specs/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AuctionSniper/AuctionSniper-Prefix.pch";
-				INFOPLIST_FILE = "AuctionSniperTests/AuctionSniperTests-Info.plist";
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				INFOPLIST_FILE = "Specs/Specs-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
-		528FCB4616ED0A4C0071600E /* Release */ = {
+		528FCB5D16ED0B350071600E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AuctionSniper.app/AuctionSniper";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)/Specs/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AuctionSniper/AuctionSniper-Prefix.pch";
-				INFOPLIST_FILE = "AuctionSniperTests/AuctionSniperTests-Info.plist";
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				INFOPLIST_FILE = "Specs/Specs-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -439,11 +438,11 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		528FCB4416ED0A4C0071600E /* Build configuration list for PBXNativeTarget "AuctionSniperTests" */ = {
+		528FCB5B16ED0B350071600E /* Build configuration list for PBXNativeTarget "Specs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				528FCB4516ED0A4C0071600E /* Debug */,
-				528FCB4616ED0A4C0071600E /* Release */,
+				528FCB5C16ED0B350071600E /* Debug */,
+				528FCB5D16ED0B350071600E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
