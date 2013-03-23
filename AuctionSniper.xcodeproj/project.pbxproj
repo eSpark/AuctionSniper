@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5223D9B216FB681E00857F76 /* bidding.feature in Resources */ = {isa = PBXBuildFile; fileRef = 5223D9B116FB681E00857F76 /* bidding.feature */; };
 		528FCB1316ED0A4C0071600E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB1216ED0A4C0071600E /* UIKit.framework */; };
 		528FCB1516ED0A4C0071600E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB1416ED0A4C0071600E /* Foundation.framework */; };
 		528FCB1716ED0A4C0071600E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB1616ED0A4C0071600E /* CoreGraphics.framework */; };
 		528FCB1D16ED0A4C0071600E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB1B16ED0A4C0071600E /* InfoPlist.strings */; };
-		528FCB1F16ED0A4C0071600E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 528FCB1E16ED0A4C0071600E /* main.m */; };
-		528FCB2316ED0A4C0071600E /* GASAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 528FCB2216ED0A4C0071600E /* GASAppDelegate.m */; };
 		528FCB2516ED0A4C0071600E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB2416ED0A4C0071600E /* Default.png */; };
 		528FCB2716ED0A4C0071600E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB2616ED0A4C0071600E /* Default@2x.png */; };
 		528FCB2916ED0A4C0071600E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB2816ED0A4C0071600E /* Default-568h@2x.png */; };
@@ -22,22 +21,24 @@
 		528FCB5516ED0B340071600E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB5316ED0B340071600E /* InfoPlist.strings */; };
 		528FCB5716ED0B340071600E /* ExampleSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 528FCB5616ED0B340071600E /* ExampleSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		528FCB5916ED0B350071600E /* Cedar-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB5816ED0B350071600E /* Cedar-iOS.framework */; };
-		528FCB7516ED0FCC0071600E /* my_first.feature in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB6116ED0FCC0071600E /* my_first.feature */; };
 		528FCB7616ED0FCC0071600E /* launch_steps.rb in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB6316ED0FCC0071600E /* launch_steps.rb */; };
 		528FCB7716ED0FCC0071600E /* env.rb in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB6516ED0FCC0071600E /* env.rb */; };
+		52969CDC16FB762E00860508 /* auction_steps.rb in Resources */ = {isa = PBXBuildFile; fileRef = 52969CDB16FB762E00860508 /* auction_steps.rb */; };
+		52969D3216FB851100860508 /* GASAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52969D3116FB851100860508 /* GASAppDelegate.m */; };
+		52969D3416FB853B00860508 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52969D3316FB853B00860508 /* main.m */; };
+		52969D3816FB86C500860508 /* GASViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52969D3616FB86C500860508 /* GASViewController.m */; };
+		52969D3916FB86C500860508 /* GASViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52969D3716FB86C500860508 /* GASViewController_iPad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5223D9B116FB681E00857F76 /* bidding.feature */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bidding.feature; sourceTree = "<group>"; };
 		528FCB0F16ED0A4C0071600E /* AuctionSniper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuctionSniper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		528FCB1216ED0A4C0071600E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		528FCB1416ED0A4C0071600E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		528FCB1616ED0A4C0071600E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		528FCB1A16ED0A4C0071600E /* AuctionSniper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AuctionSniper-Info.plist"; sourceTree = "<group>"; };
 		528FCB1C16ED0A4C0071600E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		528FCB1E16ED0A4C0071600E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		528FCB2016ED0A4C0071600E /* AuctionSniper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AuctionSniper-Prefix.pch"; sourceTree = "<group>"; };
-		528FCB2116ED0A4C0071600E /* GASAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GASAppDelegate.h; sourceTree = "<group>"; };
-		528FCB2216ED0A4C0071600E /* GASAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GASAppDelegate.m; sourceTree = "<group>"; };
 		528FCB2416ED0A4C0071600E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		528FCB2616ED0A4C0071600E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		528FCB2816ED0A4C0071600E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -49,9 +50,15 @@
 		528FCB5816ED0B350071600E /* Cedar-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iOS.framework"; path = "Frameworks/Cedar-iOS.framework"; sourceTree = "<group>"; };
 		528FCB5A16ED0B350071600E /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
 		528FCB5E16ED0BE40071600E /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
-		528FCB6116ED0FCC0071600E /* my_first.feature */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = my_first.feature; sourceTree = "<group>"; };
 		528FCB6316ED0FCC0071600E /* launch_steps.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = launch_steps.rb; sourceTree = "<group>"; };
 		528FCB6516ED0FCC0071600E /* env.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = env.rb; sourceTree = "<group>"; };
+		52969CDB16FB762E00860508 /* auction_steps.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = auction_steps.rb; sourceTree = "<group>"; };
+		52969D3016FB851100860508 /* GASAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GASAppDelegate.h; sourceTree = "<group>"; };
+		52969D3116FB851100860508 /* GASAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GASAppDelegate.m; sourceTree = "<group>"; };
+		52969D3316FB853B00860508 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		52969D3516FB86C500860508 /* GASViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GASViewController.h; sourceTree = "<group>"; };
+		52969D3616FB86C500860508 /* GASViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GASViewController.m; sourceTree = "<group>"; };
+		52969D3716FB86C500860508 /* GASViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GASViewController_iPad.xib; path = ../src/GASViewController_iPad.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +120,8 @@
 		528FCB1816ED0A4C0071600E /* AuctionSniper */ = {
 			isa = PBXGroup;
 			children = (
-				528FCB2116ED0A4C0071600E /* GASAppDelegate.h */,
-				528FCB2216ED0A4C0071600E /* GASAppDelegate.m */,
+				52969D3A16FB86E600860508 /* resources */,
+				52969D2916FB834200860508 /* src */,
 				528FCB1916ED0A4C0071600E /* Supporting Files */,
 			);
 			path = AuctionSniper;
@@ -125,7 +132,6 @@
 			children = (
 				528FCB1A16ED0A4C0071600E /* AuctionSniper-Info.plist */,
 				528FCB1B16ED0A4C0071600E /* InfoPlist.strings */,
-				528FCB1E16ED0A4C0071600E /* main.m */,
 				528FCB2016ED0A4C0071600E /* AuctionSniper-Prefix.pch */,
 				528FCB2416ED0A4C0071600E /* Default.png */,
 				528FCB2616ED0A4C0071600E /* Default@2x.png */,
@@ -166,7 +172,7 @@
 		528FCB6016ED0FCC0071600E /* features */ = {
 			isa = PBXGroup;
 			children = (
-				528FCB6116ED0FCC0071600E /* my_first.feature */,
+				5223D9B116FB681E00857F76 /* bidding.feature */,
 				528FCB6216ED0FCC0071600E /* step_definitions */,
 				528FCB6416ED0FCC0071600E /* support */,
 			);
@@ -176,6 +182,7 @@
 		528FCB6216ED0FCC0071600E /* step_definitions */ = {
 			isa = PBXGroup;
 			children = (
+				52969CDB16FB762E00860508 /* auction_steps.rb */,
 				528FCB6316ED0FCC0071600E /* launch_steps.rb */,
 			);
 			path = step_definitions;
@@ -188,6 +195,28 @@
 			);
 			path = support;
 			sourceTree = "<group>";
+		};
+		52969D2916FB834200860508 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				52969D3316FB853B00860508 /* main.m */,
+				52969D3016FB851100860508 /* GASAppDelegate.h */,
+				52969D3116FB851100860508 /* GASAppDelegate.m */,
+				52969D3516FB86C500860508 /* GASViewController.h */,
+				52969D3616FB86C500860508 /* GASViewController.m */,
+			);
+			name = src;
+			path = AuctionSniper/src;
+			sourceTree = SOURCE_ROOT;
+		};
+		52969D3A16FB86E600860508 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				52969D3716FB86C500860508 /* GASViewController_iPad.xib */,
+			);
+			name = resources;
+			path = AuctionSniper/resources;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -264,9 +293,11 @@
 				528FCB2516ED0A4C0071600E /* Default.png in Resources */,
 				528FCB2716ED0A4C0071600E /* Default@2x.png in Resources */,
 				528FCB2916ED0A4C0071600E /* Default-568h@2x.png in Resources */,
-				528FCB7516ED0FCC0071600E /* my_first.feature in Resources */,
 				528FCB7616ED0FCC0071600E /* launch_steps.rb in Resources */,
 				528FCB7716ED0FCC0071600E /* env.rb in Resources */,
+				5223D9B216FB681E00857F76 /* bidding.feature in Resources */,
+				52969CDC16FB762E00860508 /* auction_steps.rb in Resources */,
+				52969D3916FB86C500860508 /* GASViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,8 +332,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				528FCB1F16ED0A4C0071600E /* main.m in Sources */,
-				528FCB2316ED0A4C0071600E /* GASAppDelegate.m in Sources */,
+				52969D3216FB851100860508 /* GASAppDelegate.m in Sources */,
+				52969D3416FB853B00860508 /* main.m in Sources */,
+				52969D3816FB86C500860508 /* GASViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
