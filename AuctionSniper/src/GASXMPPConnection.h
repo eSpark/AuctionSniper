@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "strophe.h"
+
+#import "XMPP.h"
+
 
 @interface GASXMPPConnection : NSObject
 {

@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "strophe.h"
 #import "GASXMPPConnection.h"
 
 #define AUCTION_ID_FORMAT @"auction-item-%@@%@/%@" //item_id, xmpp_host, resource
