@@ -8,6 +8,7 @@
 
 #import "GASViewController.h"
 
+
 @interface GASViewController ()
 
 @end
@@ -18,7 +19,10 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.xmpp_connection =
+            [GASXMPPConnection connectionForJid:AUCTION_USER
+                                    andPassword:AUCTION_PASSWORD
+                                         atHost:AUCTION_HOST];
     }
     return self;
 }
@@ -26,7 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
 }
 
 - (void)didReceiveMemoryWarning
