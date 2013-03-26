@@ -18,8 +18,9 @@ module AuctionSniper
     def stop_selling_item
       if @message
         stop_message = Jabber::Message.new.set_type(:chat)
-        stop_message.from = @message.to
-        stop_message.body = ''
+        stop_message.to = @message.from
+        stop_message.from = jid
+        stop_message.body = 'lost'
         @client.send(stop_message)
       end
 
@@ -27,8 +28,11 @@ module AuctionSniper
     end
 
   private
+    def jid
+      Jabber::JID.new("auction-item-#{@itemid}@localhost/auction")
+    end
     def connect_to_server
-      @client = Jabber::Client.new(Jabber::JID.new("auction-item-#{@itemid}@localhost/auction"))
+      @client = Jabber::Client.new(jid)
       @client.connect
       @client.auth('auction')
       @client.send(Jabber::Presence.new.set_type(:chat))

@@ -39,6 +39,7 @@
     NSAssert([self.xmppStream connect: &error],
              @"Error connecting to XMPP Server: %@", error.localizedDescription);
     [self.statusLabel setText: @"Joining..."];
+    [self.statusLabel setHidden: NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,7 +67,16 @@
 {
     NSString *auctionItemUser = [NSString stringWithFormat: AUCTION_ID_FORMAT, @"54321"];
     XMPPJID *itemJid = [XMPPJID jidWithUser: auctionItemUser domain: AUCTION_HOST resource: AUCTION_RESOURCE];
+
+    //mark ourselves as present so we can receive messages
+    XMPPPresence *presence = [XMPPPresence presence];
+    [sender sendElement: presence];
     
+//    //subscribe to auction so we can receive messages back
+//    presence = [XMPPPresence presenceWithType: @"subscription" to: itemJid];
+//    [sender sendElement: presence];
+    
+    //send join message
     XMPPMessage *joinMessage = [XMPPMessage messageWithType:@"chat" to: itemJid];
     NSXMLNode *body = [NSXMLNode elementWithName: @"body" stringValue: @""];
     [joinMessage addChild: body];
@@ -74,9 +84,15 @@
     [sender sendElement: joinMessage];
 }
 
-- (void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(NSXMLElement *)error;
+- (void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(NSXMLElement *)error
 {
     NSLog(@"Failed to authenticate, %@", error);
+}
+
+- (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message
+{
+    NSLog(@"Received Message %@", message);
+    [self.statusLabel setText: @"Lost"];
 }
 
 @end

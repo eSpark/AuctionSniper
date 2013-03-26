@@ -31,5 +31,6 @@
 - (void)xmppStream:(XMPPStream *)sender didNotConnect:(NSError *)error;
 - (void)xmppStreamDidAuthenticate:(XMPPStream *)sender;
 - (void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(NSXMLElement *)error;
+- (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message;
 
 @end
