@@ -9,7 +9,7 @@ Current Status:
 Passing the first test. (Chapter 11)
 
 
-Building
+Set Up Fake Auction Server
 ========
 
 This is a bit of a chore to set up.  Here is what you will need to do:
@@ -28,7 +28,14 @@ Openfire installs a preference item which lets you start/stop it.  It runs in
 32 bit mode so you have to restart System Preferences each time you access it.  
 That's awesome.
 
-run "bundle install"
+Building
+========
+
+Make sure you're on the latest version of XCode (4.6.1). Also, check that you have 
+the latest command line tools - go to Preferences -> Downloads.
+
+Then run "bundle install"
+
 Run the command "frank build" to compile the app, and make a "frankified" version 
 of it, and install the build on the simulator.  Basically, this adds instrumentation
 to the app that frank uses to "drive" the app on the simulator.
