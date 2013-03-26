@@ -6,7 +6,7 @@ The Auction Sniper from _Growing Object Oriented Software, Guided by Tests_ but 
 Current Status:
 ---------------
 
-Failing the first test.
+Passing the first test. (Chapter 11)
 
 
 Building
@@ -38,3 +38,13 @@ been run and committed to the project.  see [frank](http://testingwithfrank.com)
 for details.
 
 To test, cd to the Frank directory (you will see ./features), and run cucumber.
+
+Things I'm not happy about:
+XMPPFramework produces about 200 warnings between itself and its dependencies.
+libstrophe would be simpler, but I got stuck trying to cross-compile it for iOS
+with an error about openssl/ssl.h present but could not be compiled.  I may
+try and re-write the implementation with strophe if I can figure out how
+to get past that.
+
+I had several stupid errors in the cucumber steps that caused me an hour or two
+of frustration (sending the "lost" message to the auction instead of the sniper)
