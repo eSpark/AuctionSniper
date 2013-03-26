@@ -24,11 +24,15 @@
 		1B39EEAE1701F47900D9B7AD /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B39EE911701F47800D9B7AD /* DispatchQueueLogFormatter.m */; };
 		1B39EEAF1701F47900D9B7AD /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B39EE911701F47800D9B7AD /* DispatchQueueLogFormatter.m */; };
 		1B39EF641702089B00D9B7AD /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B39EF631702089B00D9B7AD /* libxml2.dylib */; };
-		1B9BEA531702134D00CB19BE /* libstrophe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9BEA521702134D00CB19BE /* libstrophe.a */; };
 		1B9BEA611702145F00CB19BE /* NSString+DDXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BEA571702145F00CB19BE /* NSString+DDXML.m */; };
 		1B9BEA621702145F00CB19BE /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BEA5A1702145F00CB19BE /* DDXMLDocument.m */; };
 		1B9BEA631702145F00CB19BE /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BEA5C1702145F00CB19BE /* DDXMLElement.m */; };
 		1B9BEA641702145F00CB19BE /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BEA5E1702145F00CB19BE /* DDXMLNode.m */; };
+		1B9BEA6E1702396500CB19BE /* libstrophe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9BEA6D1702396500CB19BE /* libstrophe.a */; };
+		1B9BEA7817023A0400CB19BE /* libexpat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9BEA7617023A0400CB19BE /* libexpat.a */; };
+		1B9BEA7D17023CE700CB19BE /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9BEA7B17023CE700CB19BE /* libcrypto.a */; };
+		1B9BEA7E17023CE700CB19BE /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9BEA7C17023CE700CB19BE /* libssl.a */; };
+		1B9BEA811702402500CB19BE /* GASViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B9BEA801702402500CB19BE /* GASViewController_iPad.xib */; };
 		5223D9B216FB681E00857F76 /* bidding.feature in Resources */ = {isa = PBXBuildFile; fileRef = 5223D9B116FB681E00857F76 /* bidding.feature */; };
 		52462B60170135F300618CFF /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 52462B5F170135F300618CFF /* libiconv.dylib */; };
 		528FCB1316ED0A4C0071600E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB1216ED0A4C0071600E /* UIKit.framework */; };
@@ -97,7 +101,6 @@
 		1B39EE901701F47800D9B7AD /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
 		1B39EE911701F47800D9B7AD /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
 		1B39EF631702089B00D9B7AD /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		1B9BEA521702134D00CB19BE /* libstrophe.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libstrophe.a; sourceTree = "<group>"; };
 		1B9BEA561702145F00CB19BE /* NSString+DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDXML.h"; sourceTree = "<group>"; };
 		1B9BEA571702145F00CB19BE /* NSString+DDXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDXML.m"; sourceTree = "<group>"; };
 		1B9BEA581702145F00CB19BE /* DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXML.h; sourceTree = "<group>"; };
@@ -108,6 +111,11 @@
 		1B9BEA5D1702145F00CB19BE /* DDXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLNode.h; sourceTree = "<group>"; };
 		1B9BEA5E1702145F00CB19BE /* DDXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLNode.m; sourceTree = "<group>"; };
 		1B9BEA601702145F00CB19BE /* DDXMLPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLPrivate.h; sourceTree = "<group>"; };
+		1B9BEA6D1702396500CB19BE /* libstrophe.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libstrophe.a; sourceTree = "<group>"; };
+		1B9BEA7617023A0400CB19BE /* libexpat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libexpat.a; sourceTree = "<group>"; };
+		1B9BEA7B17023CE700CB19BE /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		1B9BEA7C17023CE700CB19BE /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		1B9BEA801702402500CB19BE /* GASViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GASViewController_iPad.xib; path = AuctionSniper/src/GASViewController_iPad.xib; sourceTree = SOURCE_ROOT; };
 		5223D9B116FB681E00857F76 /* bidding.feature */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bidding.feature; sourceTree = "<group>"; };
 		52462B5F170135F300618CFF /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		528FCB0F16ED0A4C0071600E /* AuctionSniper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuctionSniper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,7 +144,6 @@
 		52969D3316FB853B00860508 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		52969D3516FB86C500860508 /* GASViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GASViewController.h; sourceTree = "<group>"; };
 		52969D3616FB86C500860508 /* GASViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GASViewController.m; sourceTree = "<group>"; };
-		52969D3716FB86C500860508 /* GASViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GASViewController_iPad.xib; path = AuctionSniper/src/GASViewController_iPad.xib; sourceTree = "<group>"; };
 		52ABAA9F1700B7A600D7C96A /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
 		52ABAAA01700B7A600D7C96A /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
 		52ABAAA11700B7A600D7C96A /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
@@ -237,7 +244,10 @@
 				528FCB1516ED0A4C0071600E /* Foundation.framework in Frameworks */,
 				528FCB1716ED0A4C0071600E /* CoreGraphics.framework in Frameworks */,
 				52ABAAE71700B9CB00D7C96A /* libidn.a in Frameworks */,
-				1B9BEA531702134D00CB19BE /* libstrophe.a in Frameworks */,
+				1B9BEA6E1702396500CB19BE /* libstrophe.a in Frameworks */,
+				1B9BEA7817023A0400CB19BE /* libexpat.a in Frameworks */,
+				1B9BEA7D17023CE700CB19BE /* libcrypto.a in Frameworks */,
+				1B9BEA7E17023CE700CB19BE /* libssl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +339,6 @@
 		528FCB0616ED0A4C0071600E = {
 			isa = PBXGroup;
 			children = (
-				1B39EF631702089B00D9B7AD /* libxml2.dylib */,
 				528FCB5F16ED0FCC0071600E /* Frank */,
 				528FCB1816ED0A4C0071600E /* AuctionSniper */,
 				528FCB5016ED0B340071600E /* Specs */,
@@ -350,7 +359,11 @@
 		528FCB1116ED0A4C0071600E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1B9BEA521702134D00CB19BE /* libstrophe.a */,
+				1B9BEA7B17023CE700CB19BE /* libcrypto.a */,
+				1B9BEA7C17023CE700CB19BE /* libssl.a */,
+				1B39EF631702089B00D9B7AD /* libxml2.dylib */,
+				1B9BEA7617023A0400CB19BE /* libexpat.a */,
+				1B9BEA6D1702396500CB19BE /* libstrophe.a */,
 				52462B5F170135F300618CFF /* libiconv.dylib */,
 				52ABAB3E1700BD3700D7C96A /* libresolv.dylib */,
 				52ABAABD1700B8C400D7C96A /* Security.framework */,
@@ -459,7 +472,7 @@
 		52969D3A16FB86E600860508 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				52969D3716FB86C500860508 /* GASViewController_iPad.xib */,
+				1B9BEA801702402500CB19BE /* GASViewController_iPad.xib */,
 			);
 			name = resources;
 			path = AuctionSniper/resources;
@@ -791,6 +804,7 @@
 				528FCB7716ED0FCC0071600E /* env.rb in Resources */,
 				5223D9B216FB681E00857F76 /* bidding.feature in Resources */,
 				52969CDC16FB762E00860508 /* auction_steps.rb in Resources */,
+				1B9BEA811702402500CB19BE /* GASViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1010,6 +1024,7 @@
 					"\"$(SRCROOT)/AuctionSniper/Vendor/libidn\"",
 					"\"$(SRCROOT)\"",
 				);
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/AuctionSniper/Vendor\"/**";
