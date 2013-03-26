@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5223D9B216FB681E00857F76 /* bidding.feature in Resources */ = {isa = PBXBuildFile; fileRef = 5223D9B116FB681E00857F76 /* bidding.feature */; };
+		52462B60170135F300618CFF /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 52462B5F170135F300618CFF /* libiconv.dylib */; };
 		528FCB1316ED0A4C0071600E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB1216ED0A4C0071600E /* UIKit.framework */; };
 		528FCB1516ED0A4C0071600E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB1416ED0A4C0071600E /* Foundation.framework */; };
 		528FCB1716ED0A4C0071600E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB1616ED0A4C0071600E /* CoreGraphics.framework */; };
@@ -28,7 +29,6 @@
 		52969D3416FB853B00860508 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52969D3316FB853B00860508 /* main.m */; };
 		52969D3816FB86C500860508 /* GASViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52969D3616FB86C500860508 /* GASViewController.m */; };
 		52969D3916FB86C500860508 /* GASViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52969D3716FB86C500860508 /* GASViewController_iPad.xib */; };
-		52ABAA9C1700B6A300D7C96A /* GASXMPPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ABAA9B1700B6A300D7C96A /* GASXMPPConnection.m */; };
 		52ABAAAF1700B7A600D7C96A /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ABAAA01700B7A600D7C96A /* DDAbstractDatabaseLogger.m */; };
 		52ABAAB01700B7A600D7C96A /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ABAAA21700B7A600D7C96A /* DDASLLogger.m */; };
 		52ABAAB11700B7A600D7C96A /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ABAAA41700B7A600D7C96A /* DDFileLogger.m */; };
@@ -74,6 +74,7 @@
 
 /* Begin PBXFileReference section */
 		5223D9B116FB681E00857F76 /* bidding.feature */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bidding.feature; sourceTree = "<group>"; };
+		52462B5F170135F300618CFF /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		528FCB0F16ED0A4C0071600E /* AuctionSniper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuctionSniper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		528FCB1216ED0A4C0071600E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		528FCB1416ED0A4C0071600E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -101,8 +102,6 @@
 		52969D3516FB86C500860508 /* GASViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GASViewController.h; sourceTree = "<group>"; };
 		52969D3616FB86C500860508 /* GASViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GASViewController.m; sourceTree = "<group>"; };
 		52969D3716FB86C500860508 /* GASViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GASViewController_iPad.xib; path = ../src/GASViewController_iPad.xib; sourceTree = "<group>"; };
-		52ABAA9A1700B6A300D7C96A /* GASXMPPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GASXMPPConnection.h; sourceTree = "<group>"; };
-		52ABAA9B1700B6A300D7C96A /* GASXMPPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GASXMPPConnection.m; sourceTree = "<group>"; };
 		52ABAA9F1700B7A600D7C96A /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
 		52ABAAA01700B7A600D7C96A /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
 		52ABAAA11700B7A600D7C96A /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
@@ -194,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52462B60170135F300618CFF /* libiconv.dylib in Frameworks */,
 				52ABAB3F1700BD3700D7C96A /* libresolv.dylib in Frameworks */,
 				52ABAABE1700B8C400D7C96A /* Security.framework in Frameworks */,
 				52ABAABC1700B8B600D7C96A /* CFNetwork.framework in Frameworks */,
@@ -241,6 +241,7 @@
 		528FCB1116ED0A4C0071600E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52462B5F170135F300618CFF /* libiconv.dylib */,
 				52ABAB3E1700BD3700D7C96A /* libresolv.dylib */,
 				52ABAABD1700B8C400D7C96A /* Security.framework */,
 				52ABAABB1700B8B600D7C96A /* CFNetwork.framework */,
@@ -335,8 +336,6 @@
 		52969D2916FB834200860508 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				52ABAA9A1700B6A300D7C96A /* GASXMPPConnection.h */,
-				52ABAA9B1700B6A300D7C96A /* GASXMPPConnection.m */,
 				52969D3316FB853B00860508 /* main.m */,
 				52969D3016FB851100860508 /* GASAppDelegate.h */,
 				52969D3116FB851100860508 /* GASAppDelegate.m */,
@@ -608,8 +607,8 @@
 			buildConfigurationList = 528FCB4116ED0A4C0071600E /* Build configuration list for PBXNativeTarget "AuctionSniper" */;
 			buildPhases = (
 				528FCB0B16ED0A4C0071600E /* Sources */,
-				528FCB0C16ED0A4C0071600E /* Frameworks */,
 				528FCB0D16ED0A4C0071600E /* Resources */,
+				528FCB0C16ED0A4C0071600E /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -719,7 +718,6 @@
 				52969D3216FB851100860508 /* GASAppDelegate.m in Sources */,
 				52969D3416FB853B00860508 /* main.m in Sources */,
 				52969D3816FB86C500860508 /* GASViewController.m in Sources */,
-				52ABAA9C1700B6A300D7C96A /* GASXMPPConnection.m in Sources */,
 				52ABAAAF1700B7A600D7C96A /* DDAbstractDatabaseLogger.m in Sources */,
 				52ABAAB01700B7A600D7C96A /* DDASLLogger.m in Sources */,
 				52ABAAB11700B7A600D7C96A /* DDFileLogger.m in Sources */,
@@ -816,8 +814,9 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				"OTHER_LDFLAGS[arch=*]" = "";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -843,8 +842,9 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				"OTHER_LDFLAGS[arch=*]" = "";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -856,6 +856,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AuctionSniper/AuctionSniper-Prefix.pch";
 				INFOPLIST_FILE = "AuctionSniper/AuctionSniper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRANK_LIBRARY_SEARCH_PATHS)",
@@ -865,8 +866,11 @@
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"$(FRANK_LDFLAGS)",
+					"-lxml2",
+					"-liconv",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -877,12 +881,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AuctionSniper/AuctionSniper-Prefix.pch";
 				INFOPLIST_FILE = "AuctionSniper/AuctionSniper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frank\"",
 					"\"$(SRCROOT)/AuctionSniper/Vendor/libidn\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

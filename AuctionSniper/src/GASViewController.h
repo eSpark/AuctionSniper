@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GASXMPPConnection.h"
+#import "XMPP.h"
 
-#define AUCTION_ID_FORMAT @"auction-item-%@@%@/%@" //item_id, xmpp_host, resource
+#define AUCTION_ID_FORMAT @"auction-item-%@"
 #define AUCTION_HOST @"localhost"
 #define AUCTION_RESOURCE @"Auction"
 
@@ -20,5 +20,16 @@
 #define AUCTION_USER @"sniper"
 
 @interface GASViewController : UIViewController
-    @property (nonatomic, retain) GASXMPPConnection *xmpp_connection;
+
+@property (nonatomic, retain) XMPPStream *xmppStream;
+@property (nonatomic, retain) IBOutlet UILabel *statusLabel;
+
+#pragma mark -
+#pragma mark XMPPStreamDelegate methods
+
+- (void)xmppStreamDidConnect:(XMPPStream *)sender;
+- (void)xmppStream:(XMPPStream *)sender didNotConnect:(NSError *)error;
+- (void)xmppStreamDidAuthenticate:(XMPPStream *)sender;
+- (void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(NSXMLElement *)error;
+
 @end

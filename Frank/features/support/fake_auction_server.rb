@@ -16,7 +16,7 @@ module AuctionSniper
     end
 
     def stop_selling_item
-      if message
+      if @message
         stop_message = Jabber::Message.new.set_type(:chat)
         stop_message.from = @message.to
         stop_message.body = ''
@@ -38,11 +38,14 @@ module AuctionSniper
 
     def add_callbacks
       @roster.add_subscription_request_callback do |request, presence|
+        puts "received subscription request"
         @roster.accept_subscription(presence.from)
       end
 
       @client.add_message_callback do |message|
+        puts "Recieved Message"
         @message = message
+        @join_requests += 1
       end
     end
   end
