@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52206B4517022618006833AE /* GASViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52206B4417022618006833AE /* GASViewController_iPad.xib */; };
 		5223D9B216FB681E00857F76 /* bidding.feature in Resources */ = {isa = PBXBuildFile; fileRef = 5223D9B116FB681E00857F76 /* bidding.feature */; };
 		52462B60170135F300618CFF /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 52462B5F170135F300618CFF /* libiconv.dylib */; };
 		528FCB1316ED0A4C0071600E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB1216ED0A4C0071600E /* UIKit.framework */; };
@@ -28,7 +29,6 @@
 		52969D3216FB851100860508 /* GASAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52969D3116FB851100860508 /* GASAppDelegate.m */; };
 		52969D3416FB853B00860508 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52969D3316FB853B00860508 /* main.m */; };
 		52969D3816FB86C500860508 /* GASViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52969D3616FB86C500860508 /* GASViewController.m */; };
-		52969D3916FB86C500860508 /* GASViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52969D3716FB86C500860508 /* GASViewController_iPad.xib */; };
 		52ABAAAF1700B7A600D7C96A /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ABAAA01700B7A600D7C96A /* DDAbstractDatabaseLogger.m */; };
 		52ABAAB01700B7A600D7C96A /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ABAAA21700B7A600D7C96A /* DDASLLogger.m */; };
 		52ABAAB11700B7A600D7C96A /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ABAAA41700B7A600D7C96A /* DDFileLogger.m */; };
@@ -73,6 +73,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52206B4417022618006833AE /* GASViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GASViewController_iPad.xib; sourceTree = "<group>"; };
 		5223D9B116FB681E00857F76 /* bidding.feature */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bidding.feature; sourceTree = "<group>"; };
 		52462B5F170135F300618CFF /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		528FCB0F16ED0A4C0071600E /* AuctionSniper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuctionSniper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,7 +102,6 @@
 		52969D3316FB853B00860508 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		52969D3516FB86C500860508 /* GASViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GASViewController.h; sourceTree = "<group>"; };
 		52969D3616FB86C500860508 /* GASViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GASViewController.m; sourceTree = "<group>"; };
-		52969D3716FB86C500860508 /* GASViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GASViewController_iPad.xib; path = ../src/GASViewController_iPad.xib; sourceTree = "<group>"; };
 		52ABAA9F1700B7A600D7C96A /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
 		52ABAAA01700B7A600D7C96A /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
 		52ABAAA11700B7A600D7C96A /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
@@ -349,7 +349,7 @@
 		52969D3A16FB86E600860508 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				52969D3716FB86C500860508 /* GASViewController_iPad.xib */,
+				52206B4417022618006833AE /* GASViewController_iPad.xib */,
 			);
 			name = resources;
 			path = AuctionSniper/resources;
@@ -678,9 +678,9 @@
 				528FCB7716ED0FCC0071600E /* env.rb in Resources */,
 				5223D9B216FB681E00857F76 /* bidding.feature in Resources */,
 				52969CDC16FB762E00860508 /* auction_steps.rb in Resources */,
-				52969D3916FB86C500860508 /* GASViewController_iPad.xib in Resources */,
 				52ABAAB61700B7A600D7C96A /* README.txt in Resources */,
 				52ABAAE61700B9CB00D7C96A /* build-libidn.sh in Resources */,
+				52206B4517022618006833AE /* GASViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
