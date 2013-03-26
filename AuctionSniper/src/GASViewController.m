@@ -7,6 +7,7 @@
 //
 
 #import "GASViewController.h"
+#import "strophe.h"
 
 #pragma mark -
 #pragma mark private method declarations
@@ -32,6 +33,7 @@
         self.xmppStream = [[XMPPStream alloc] init];
         
         //set up the stream and set ourselves as the delegate.
+
         XMPPJID *jid = [XMPPJID jidWithUser: AUCTION_USER domain: AUCTION_HOST resource: AUCTION_RESOURCE];
         self.xmppStream.myJID = jid;
         [self.xmppStream addDelegate: self delegateQueue: dispatch_get_main_queue()];
