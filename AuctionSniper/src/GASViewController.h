@@ -21,4 +21,6 @@
 
 @property (nonatomic, retain) IBOutlet UILabel *statusLabel;
 
+- (void) disconnectFromServer;
+
 @end
