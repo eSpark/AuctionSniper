@@ -19,33 +19,41 @@
     
     dispatch_source_t xmpp_run_timer;
 }
+
 //xmpp callbacks
 //TODO this should be a protocol.
--(void) xmppDidConnect;
+- (void) xmppDidConnect;
 
 - (void) showJoiningStatus;
 - (void) showLostStatus;
 - (NSString*) auctionItemJid;
 - (NSString*) jid;
-- (NSString*) jidWithUser: (NSString*) aUser atHost: (NSString*) aHost;
+- (NSString*) jidForUser: (NSString*) aUser atHost: (NSString*) aHost;
 
 @end
 
+//This handles received xmpp messages.
+//for now, any message means we lost, and we ask to update the
+//controller status to lost.
 int HandleXmppMessage(xmpp_conn_t * const conn, xmpp_stanza_t * const stanza, void * const userdata) {
     char *buf = NULL;
     size_t buf_len = 0;
     xmpp_stanza_to_text(stanza, &buf, &buf_len);
     NSLog(@"received message: %s", buf);
     
-    GASViewController *controller = (__bridge GASViewController*) userdata;
-    [controller performSelectorOnMainThread: @selector(showLostStatus)
-                                 withObject: controller
-                              waitUntilDone: NO];
-    
+    //update the status in the UI, which has to be done on the main thread;
+    //we are running in the context of xmpp_run which is in a GCD block on
+    //some other queue.
+    dispatch_async(dispatch_get_main_queue(), ^{
+        GASViewController *controller = (__bridge GASViewController*) userdata;
+        [controller showLostStatus];
+    });    
     return 1;
 }
 
 //connection status change handler.
+//registers handlers with connected connection, and tells the controller
+//that we are connected.
 void HandleXmppConnectionStatusChanges(xmpp_conn_t *const conn,
                                        const xmpp_conn_event_t event,
                                        const int error,
@@ -91,15 +99,10 @@ void HandleXmppConnectionStatusChanges(xmpp_conn_t *const conn,
     
     assert(0 == xmpp_connect_client(xmpp_conn, NULL, 0, HandleXmppConnectionStatusChanges, (__bridge void*) self));
 
-    //call xmpp_run_once periodically.  This may be the wrong interval.
-    unsigned long long interval = 15ull * NSEC_PER_MSEC;
-    xmpp_run_timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,
-                                                     dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0));
-    dispatch_source_set_timer(xmpp_run_timer, DISPATCH_TIME_NOW, interval, 5ull * NSEC_PER_MSEC);
-    dispatch_source_set_event_handler(xmpp_run_timer, ^{
-        xmpp_run_once(xmpp_ctx, 5);
+    //start the xmpp event loop in another queue.
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        xmpp_run(xmpp_ctx);
     });
-    dispatch_resume(xmpp_run_timer);
 
     [self showJoiningStatus];
 }
@@ -110,11 +113,12 @@ void HandleXmppConnectionStatusChanges(xmpp_conn_t *const conn,
     // Dispose of any resources that can be recreated.
 }
 
+//TODO: implement reconnect.
 - (void) disconnectFromServer
 {
     if (! xmpp_ctx) return;
     
-    dispatch_source_cancel(xmpp_run_timer);
+    xmpp_stop(xmpp_ctx);
     
     xmpp_disconnect(xmpp_conn);
     xmpp_conn_release(xmpp_conn);
@@ -182,15 +186,15 @@ void HandleXmppConnectionStatusChanges(xmpp_conn_t *const conn,
 - (NSString*) auctionItemJid
 {
     NSString * user = [NSString stringWithFormat: AUCTION_ID_FORMAT, @"54321"];
-    return [self jidWithUser: user atHost: AUCTION_HOST];
+    return [self jidForUser: user atHost: AUCTION_HOST];
 }
 
 - (NSString*) jid
 {
-    return [self jidWithUser: AUCTION_USER atHost: AUCTION_HOST];
+    return [self jidForUser: AUCTION_USER atHost: AUCTION_HOST];
 }
 
-- (NSString*) jidWithUser: (NSString*) aUser atHost: (NSString*) aHost
+- (NSString*) jidForUser: (NSString*) aUser atHost: (NSString*) aHost
 {
     return [NSString stringWithFormat: @"%@@%@", aUser, aHost];
 }
