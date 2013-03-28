@@ -3,11 +3,12 @@ require 'xmpp4r/roster'
 
 module AuctionSniper
   class FakeAuctionServer
-    attr_reader :join_requests
+    attr_reader :messages
 
     def initialize(itemid)
       @join_requests = 0
       @itemid = itemid
+      @messages = []
     end
 
     def start_selling_item
@@ -48,8 +49,7 @@ module AuctionSniper
 
       @client.add_message_callback do |message|
         puts "Recieved Message"
-        @message = message
-        @join_requests += 1
+        @messages << message
       end
     end
   end
