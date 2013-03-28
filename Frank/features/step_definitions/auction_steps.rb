@@ -16,5 +16,5 @@ When(/^the auction closes$/) do
 end
 
 Then(/^the sniper has lost the auction$/) do
-  check_element_exists "view:'UILabel' marked:'Lost'"
+  wait_for_element_to_exist "view:'UILabel' marked:'Lost'"
 end

@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "XMPP.h"
-
 #define AUCTION_ID_FORMAT @"auction-item-%@"
 #define AUCTION_HOST @"localhost"
 #define AUCTION_RESOURCE @"Auction"
@@ -21,7 +19,8 @@
 
 @interface GASViewController : UIViewController
 
-@property (nonatomic, retain) XMPPStream *xmppStream;
 @property (nonatomic, retain) IBOutlet UILabel *statusLabel;
+
+- (void) disconnectFromServer;
 
 @end
