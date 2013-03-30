@@ -4,12 +4,11 @@ Given(/^the auction is selling item "(.*?)"$/) do |item_id|
 end
 
 When(/^I join the auction$/) do
-  check_element_exists "view:'UILabel' marked:'Joining...'"
+  wait_for_element_to_exist "view:'UILabel' marked:'Joining...'"
 end
 
 Then(/^the auction has received a join request from the sniper$/) do
-  expect(@server.messages.length).to be > 0
-  #TODO: assert message from sniper@localhost and is valid join request.
+  expect(@server.join_requests.length).to be > 0
 end
 
 When(/^the auction closes$/) do
@@ -29,5 +28,7 @@ Then(/^the sniper should be bidding$/) do
 end
 
 Then(/^the auction should receive a bid from the sniper of "(.*?)"$/) do |bid|
-  expect(@server.message.body).to eq("SOLVersion: 1.1; Command: BID; Price: #{bid};")
+  wait_until(timeout: 2) do
+    @server.messages.last.body == "SOLVersion: 1.1; Command: BID; Price: #{bid};"
+  end
 end
