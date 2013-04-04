@@ -24,7 +24,6 @@
 		528FCB4E16ED0B340071600E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB1216ED0A4C0071600E /* UIKit.framework */; };
 		528FCB4F16ED0B340071600E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB1416ED0A4C0071600E /* Foundation.framework */; };
 		528FCB5516ED0B340071600E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB5316ED0B340071600E /* InfoPlist.strings */; };
-		528FCB5716ED0B340071600E /* ExampleSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 528FCB5616ED0B340071600E /* ExampleSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		528FCB5916ED0B350071600E /* Cedar-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528FCB5816ED0B350071600E /* Cedar-iOS.framework */; };
 		528FCB7616ED0FCC0071600E /* launch_steps.rb in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB6316ED0FCC0071600E /* launch_steps.rb */; };
 		528FCB7716ED0FCC0071600E /* env.rb in Resources */ = {isa = PBXBuildFile; fileRef = 528FCB6516ED0FCC0071600E /* env.rb */; };
@@ -32,6 +31,10 @@
 		52969D3216FB851100860508 /* GASAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52969D3116FB851100860508 /* GASAppDelegate.m */; };
 		52969D3416FB853B00860508 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52969D3316FB853B00860508 /* main.m */; };
 		52969D3816FB86C500860508 /* GASViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52969D3616FB86C500860508 /* GASViewController.m */; };
+		8F4C628C170681060064C342 /* GASAuctionMessageTranslatorSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8F4C628B170681060064C342 /* GASAuctionMessageTranslatorSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8F4C628F1706852D0064C342 /* GASAuctionMessageTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4C628E1706852D0064C342 /* GASAuctionMessageTranslator.m */; };
+		8F4C629217069F550064C342 /* GASAuctionSniper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4C629117069F550064C342 /* GASAuctionSniper.m */; };
+		8F4C62951706A0670064C342 /* GASAuctionSniperSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8F4C62941706A0670064C342 /* GASAuctionSniperSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8FE5E410170275EC00CB99A7 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 52ABAB3E1700BD3700D7C96A /* libresolv.dylib */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +60,6 @@
 		528FCB4C16ED0B340071600E /* Specs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		528FCB5216ED0B340071600E /* Specs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
 		528FCB5416ED0B340071600E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		528FCB5616ED0B340071600E /* ExampleSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ExampleSpec.mm; sourceTree = "<group>"; };
 		528FCB5816ED0B350071600E /* Cedar-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iOS.framework"; path = "Frameworks/Cedar-iOS.framework"; sourceTree = "<group>"; };
 		528FCB5A16ED0B350071600E /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
 		528FCB5E16ED0BE40071600E /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
@@ -72,6 +74,14 @@
 		52ABAABB1700B8B600D7C96A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		52ABAABD1700B8C400D7C96A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		52ABAB3E1700BD3700D7C96A /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
+		8F4C628A17067E850064C342 /* GASAuctionMessageListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GASAuctionMessageListener.h; sourceTree = "<group>"; };
+		8F4C628B170681060064C342 /* GASAuctionMessageTranslatorSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GASAuctionMessageTranslatorSpec.mm; sourceTree = "<group>"; };
+		8F4C628D1706852D0064C342 /* GASAuctionMessageTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GASAuctionMessageTranslator.h; sourceTree = "<group>"; };
+		8F4C628E1706852D0064C342 /* GASAuctionMessageTranslator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GASAuctionMessageTranslator.m; sourceTree = "<group>"; };
+		8F4C629017069F550064C342 /* GASAuctionSniper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GASAuctionSniper.h; sourceTree = "<group>"; };
+		8F4C629117069F550064C342 /* GASAuctionSniper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GASAuctionSniper.m; sourceTree = "<group>"; };
+		8F4C629317069FC10064C342 /* GASAuctionListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GASAuctionListener.h; sourceTree = "<group>"; };
+		8F4C62941706A0670064C342 /* GASAuctionSniperSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GASAuctionSniperSpec.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,10 +180,11 @@
 		528FCB5016ED0B340071600E /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				528FCB5616ED0B340071600E /* ExampleSpec.mm */,
 				528FCB5816ED0B350071600E /* Cedar-iOS.framework */,
 				528FCB5116ED0B340071600E /* Supporting Files */,
 				528FCB5E16ED0BE40071600E /* SpecHelper.h */,
+				8F4C628B170681060064C342 /* GASAuctionMessageTranslatorSpec.mm */,
+				8F4C62941706A0670064C342 /* GASAuctionSniperSpec.mm */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -231,6 +242,12 @@
 				52969D3116FB851100860508 /* GASAppDelegate.m */,
 				52969D3516FB86C500860508 /* GASViewController.h */,
 				52969D3616FB86C500860508 /* GASViewController.m */,
+				8F4C628A17067E850064C342 /* GASAuctionMessageListener.h */,
+				8F4C628D1706852D0064C342 /* GASAuctionMessageTranslator.h */,
+				8F4C628E1706852D0064C342 /* GASAuctionMessageTranslator.m */,
+				8F4C629017069F550064C342 /* GASAuctionSniper.h */,
+				8F4C629117069F550064C342 /* GASAuctionSniper.m */,
+				8F4C629317069FC10064C342 /* GASAuctionListener.h */,
 			);
 			name = src;
 			path = AuctionSniper/src;
@@ -369,6 +386,8 @@
 				52969D3216FB851100860508 /* GASAppDelegate.m in Sources */,
 				52969D3416FB853B00860508 /* main.m in Sources */,
 				52969D3816FB86C500860508 /* GASViewController.m in Sources */,
+				8F4C628F1706852D0064C342 /* GASAuctionMessageTranslator.m in Sources */,
+				8F4C629217069F550064C342 /* GASAuctionSniper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,7 +395,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				528FCB5716ED0B340071600E /* ExampleSpec.mm in Sources */,
+				8F4C628C170681060064C342 /* GASAuctionMessageTranslatorSpec.mm in Sources */,
+				8F4C62951706A0670064C342 /* GASAuctionSniperSpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
