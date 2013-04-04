@@ -7,4 +7,4 @@ Frank::Cucumber::FrankHelper.use_shelley_from_now_on
 # See the "Given I launch the app" step definition in launch_steps.rb for more details
 APP_BUNDLE_PATH = File.expand_path( '../../../frankified_build/Frankified.app', __FILE__ )
 
-ENV['WAIT_TIMEOUT'] = '5'
+ENV['WAIT_TIMEOUT'] = '2'

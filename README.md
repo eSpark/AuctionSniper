@@ -6,8 +6,7 @@ The Auction Sniper from _Growing Object Oriented Software, Guided by Tests_ but 
 Current Status:
 ---------------
 
-Passing the first test. (Chapter 11)
-
+Chapter 12 Getting Ready to Bid
 
 Set Up Fake Auction Server
 ========

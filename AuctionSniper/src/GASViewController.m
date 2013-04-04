@@ -7,6 +7,7 @@
 //
 
 #import "GASViewController.h"
+
 #import "strophe.h"
 
 #pragma mark -
@@ -16,21 +17,26 @@
 {
     xmpp_ctx_t *xmpp_ctx;
     xmpp_conn_t *xmpp_conn;
-    
-    dispatch_source_t xmpp_run_timer;
 }
 
 //xmpp callbacks
 //TODO this should be a protocol.
 - (void) xmppDidConnect;
 
-- (void) showJoiningStatus;
-- (void) showLostStatus;
+- (void) showAuctionStatus: (NSString*) status;
+
 - (NSString*) auctionItemJid;
 - (NSString*) jid;
 - (NSString*) jidForUser: (NSString*) aUser atHost: (NSString*) aHost;
 
 @end
+
+@interface GASViewController (SniperListener) <GASAuctionListener>
+
+@end
+
+//WIP TODO
+//change controller to AuctionSniper in the userdata, and use the protocol.
 
 //This handles received xmpp messages.
 //for now, any message means we lost, and we ask to update the
@@ -40,14 +46,13 @@ int HandleXmppMessage(xmpp_conn_t * const conn, xmpp_stanza_t * const stanza, vo
     size_t buf_len = 0;
     xmpp_stanza_to_text(stanza, &buf, &buf_len);
     NSLog(@"received message: %s", buf);
-    
-    //update the status in the UI, which has to be done on the main thread;
-    //we are running in the context of xmpp_run which is in a GCD block on
-    //some other queue.
-    dispatch_async(dispatch_get_main_queue(), ^{
-        GASViewController *controller = (__bridge GASViewController*) userdata;
-        [controller showLostStatus];
-    });    
+    char* stanza_name = xmpp_stanza_get_name(stanza);
+    if (0 == strncmp("message", stanza_name, sizeof("message"))) {
+        char *body = xmpp_stanza_get_text(xmpp_stanza_get_child_by_name(stanza, "body"));
+        
+        GASAuctionMessageTranslator *messageTranslator = (__bridge GASAuctionMessageTranslator*) userdata;
+        [messageTranslator receivedMessage: [NSString stringWithCString: body encoding: [NSString defaultCStringEncoding]]];
+    }
     return 1;
 }
 
@@ -60,8 +65,6 @@ void HandleXmppConnectionStatusChanges(xmpp_conn_t *const conn,
                                        xmpp_stream_error_t *const stream_error,
                                        void *const userdata) {
     if (XMPP_CONN_CONNECT == event) {
-        xmpp_handler_add(conn, HandleXmppMessage, NULL, "message", NULL, userdata);
-
         GASViewController *controller = (__bridge GASViewController*) userdata;
         [controller xmppDidConnect];
     } else {
@@ -79,6 +82,9 @@ void HandleXmppConnectionStatusChanges(xmpp_conn_t *const conn,
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         xmpp_initialize();
+
+        self.auctionSniper = [[GASAuctionSniper alloc] initWithListener: self];
+        self.auctionMessageTranslator = [[GASAuctionMessageTranslator alloc] initWithListener: self.auctionSniper];
     }
     
     return self;
@@ -88,7 +94,8 @@ void HandleXmppConnectionStatusChanges(xmpp_conn_t *const conn,
 {
     [super viewDidLoad];
 
-    //set up the stream and set ourselves as the delegate.
+    //connect xmpp.
+    //TODO: move this to an XMPPConnection class or something.
     xmpp_ctx = xmpp_ctx_new(NULL, xmpp_get_default_logger(XMPP_LEVEL_DEBUG));
     assert(xmpp_ctx);
     
@@ -104,7 +111,7 @@ void HandleXmppConnectionStatusChanges(xmpp_conn_t *const conn,
         xmpp_run(xmpp_ctx);
     });
 
-    [self showJoiningStatus];
+    [self showAuctionStatus: @"Joining..."];
 }
 
 - (void)didReceiveMemoryWarning
@@ -137,6 +144,9 @@ void HandleXmppConnectionStatusChanges(xmpp_conn_t *const conn,
 {
     NSLog(@"XMPP Connected!");
     
+    //register the message handler
+    xmpp_handler_add(xmpp_conn, HandleXmppMessage, NULL, NULL, NULL, (__bridge void*) self.auctionMessageTranslator);
+    
     //set our presence so we are active and can receive messages.
     NSLog(@"becoming active...");
     xmpp_stanza_t *presenceStanza = xmpp_stanza_new(xmpp_ctx);
@@ -164,7 +174,7 @@ void HandleXmppConnectionStatusChanges(xmpp_conn_t *const conn,
     xmpp_stanza_t *body = xmpp_stanza_new(xmpp_ctx);
     xmpp_stanza_set_name(body, "body");
     xmpp_stanza_t *text = xmpp_stanza_new(xmpp_ctx);
-    xmpp_stanza_set_text(text, "");
+    xmpp_stanza_set_text(text, [AUCTION_JOIN_MESSAGE cStringUsingEncoding: [NSString defaultCStringEncoding]]);
     xmpp_stanza_add_child(body, text);
     xmpp_stanza_add_child(joinRequest, body);
     xmpp_send(xmpp_conn, joinRequest);
@@ -173,13 +183,20 @@ void HandleXmppConnectionStatusChanges(xmpp_conn_t *const conn,
     
 }
 
+#pragma mark -
+#pragma mark AuctionEventListener methods
+- (void) sniperLost
+{
+    dispatch_async(dispatch_get_main_queue(), ^{[self showAuctionStatus: @"Lost"];});;
+}
+
 
 #pragma mark -
 #pragma mark helper methods
 
-- (void)showJoiningStatus
+- (void) showAuctionStatus: (NSString*) status
 {
-    [self.statusLabel setText: @"Joining..."];
+    [self.statusLabel setText: status];
     [self.statusLabel setHidden: NO];
 }
 
@@ -199,9 +216,5 @@ void HandleXmppConnectionStatusChanges(xmpp_conn_t *const conn,
     return [NSString stringWithFormat: @"%@@%@", aUser, aHost];
 }
 
-- (void) showLostStatus
-{
-    [self.statusLabel setText: @"Lost"];
-}
 
 @end
